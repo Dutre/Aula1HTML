@@ -2,6 +2,20 @@
 
 	<head>
 		<title> Cadastro de Usuário</title>
+		
+		<script>
+				function exibirSenha(){
+					var elSenha = document.getElementById("txtSenha");
+				
+					if(elSenha.type=="text"){
+				
+						elSenha.type="password";
+					}else{
+				
+						elSenha.type="text";
+					}
+				}
+		</script>
 	</head>
 	
 	<body>
@@ -14,6 +28,7 @@
 			<input type="password" value="" name="txtSenha" id="txtSenha">
 			
 			<input type ="submit" value="Salvar"/>
+			<input type ="button" onclick="exibirSenha()" value = "Ver Senha">
 		</form>
 	
 	</body>
