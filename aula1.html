@@ -15,6 +15,16 @@
 						elSenha.type="text";
 					}
 				}
+				
+				function trocar(){
+					var nome = document.getElementById("txtNome");
+					var senha = document.getElementById("txtSenha");
+					var aux = "";
+					
+					aux = nome.value;
+					nome.value = senha.value;
+					senha.value = aux;
+				}
 		</script>
 	</head>
 	
@@ -22,13 +32,15 @@
 	
 		<form>
 			<label id="lblUsername"> Nome </label>
-			<input type="text" value="" name="txtNome">
+			<input type="text" name="nome" id="txtNome">
 			
-			<label id="lblUsername"> Senha</label>
-			<input type="password" value="" name="txtSenha" id="txtSenha">
+			<label id="lblUsername"> Senha </label>
+			<input type="text" name="senha" id="txtSenha">
 			
 			<input type ="submit" value="Salvar"/>
-			<input type ="button" onclick="exibirSenha()" value = "Ver Senha">
+			<input type ="button" onclick="exibirSenha()" value="Ver Senha">
+			<input type ="button" onclick="trocar()" value="Trocar Campo"/>
+			
 		</form>
 	
 	</body>
