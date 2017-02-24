@@ -1,0 +1,44 @@
+<html>
+
+    <head>
+        <script>
+                function maior(){
+                    var a = Number(document.getElementById("Nr1"));
+                    var b = Number(document.getElementById("Nr2"));
+                    var c = Number(document.getElementById("Nr3"));
+                    var r = document.getElementById("r");
+                    var maior = 0;
+
+                    if(a>b && a>c){
+                        maior = a;
+                    }else
+                    if(b>a && b>c){
+                        maior = b;
+                    }else{
+                        maior = c;
+                    }
+
+                    r.innerText= maior;
+                }
+
+            
+        </script>
+    </head>
+
+    <body>
+        <label>Nr1:</label>
+        <input id="Nr1">
+
+        <label>Nr2:</label>
+        <input id="Nr2">
+
+        <label>Nr3</label>
+        <input id="Nr3">
+
+        <div id="r">
+        </div>
+        
+        <input type="button" value="Maior" onclick="maior()"/>
+
+    </body>
+</html>
